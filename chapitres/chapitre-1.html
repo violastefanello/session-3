@@ -9,6 +9,37 @@
 
     <p>Aliquam erat volutpat. Morbi gravida velit nisl. Duis facilisis aliquam nisi, ut auctor metus. Curabitur ex diam, mollis at odio sit amet, posuere hendrerit massa. Cras mi nisl, gravida quis orci sed, consequat sagittis est. Mauris ante magna, sagittis sit amet maximus nec, accumsan non urna. Aenean eget ipsum pretium, pretium tortor non, aliquet elit. Phasellus tempor quam ante, id scelerisque felis commodo et. Nulla vehicula sodales sapien vel scelerisque. Duis vestibulum a lacus in euismod. Etiam tincidunt elementum mattis. Nulla iaculis pellentesque consectetur.</p>
 
+    <body>
+
+    <div class="container my-4">
+      <h1>La galerie photo des ornythorinques</h1>
+      <!-- Ce block avec pour id "app" sert à créer une galerie -->
+      <div id="app">
+        <carousel-3d>
+          <!-- Pour ajouter une photo à cette galerie il faut ajouter une
+          balise <slide> contenant une <img>. Chaque slide doit avoir
+          un index different. -->
+          <slide :index="0">
+            <img src="http://www.slate.com/content/dam/slate/articles/health_and_science/wild_things/2015/06/150622_WILD_Platypus.jpg.CROP.promo-mediumlarge.jpg" />
+          </slide>
+          <slide :index="1">
+            <img src="https://cosmos-magazine.imgix.net/file/spina/photo/8890/301116_platypusvenom_2.jpg?fit=clip&w=835" />
+          </slide>
+          <slide :index="2">
+            <img src="https://www.hrt.hr/media/tt_news/kljunas321_01.jpg.688x388_q85_crop_upscale.jpg" />
+          </slide>
+        </carousel-3d>
+      </div>
+    </div>
+
+    <!-- Les fichiers javascript qui permettent au carousel de fonctionner. Ces
+    fichier JS sont référencés avec des chemins relatifs. Si vous devez les référencer
+    dans un fichier depuis un autre dossier, pensez à mettre à jour ces chemins. -->
+    <script src="../vendors/vue.min.js"></script>
+    <script src="../vendors/vue-carousel-3d.min.js"></script>
+    <script src="../gallery.js"></script>
+  </body>
+
     <ul>
       <li>
         <a href="chapitre-2.html">Chapitre suivant</a>
